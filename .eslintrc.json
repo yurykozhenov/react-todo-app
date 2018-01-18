@@ -1,7 +1,24 @@
 {
-    "extends": "react-app",
-    "rules": {
-        "indent": ["error", 2],
-        "quotes": ["error", "single"]
-    }
-} 
+  "extends": "react-app",
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ]
+  }
+}

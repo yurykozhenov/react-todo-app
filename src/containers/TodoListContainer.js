@@ -1,38 +1,24 @@
-import React, { Component } from 'react';
-import TodoList from '../components/TodoList';
+import { connect } from 'react-redux';
+import { toggleTodo } from '../actions';
+import TodoList from '../components/TodoList/TodoList';
 
-class TodoListContainer extends Component {
-  constructor() {
-    super();
+const mapStateToProps = state => {
+  return {
+    todos: state.todos
+  };
+};
 
-    this.state = { todos: [] }
-  }
+const mapDispatchToProps = dispatch => {
+  return {
+    onTodoClick: id => {
+      dispatch(toggleTodo(id));
+    }
+  };
+};
 
-  componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/todos')
-      .then(res => res.json())
-      .then(todos => this.setState({ todos }))
-  }
-
-  toggleCompleted = todo => () => {
-    const { todos } = this.state;
-
-    const newTodos = todos.map(todoInTodos => {
-      if (todoInTodos.id === todo.id) {
-        return Object.assign({}, todo, { completed: !todo.completed });
-      }
-
-      return todoInTodos;
-    });
-
-    this.setState({
-      todos: newTodos,
-    });
-  }
-
-  render() {
-    return <TodoList todos={this.state.todos} toggleCompleted={this.toggleCompleted} />;
-  }
-}
+const TodoListContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TodoList);
 
 export default TodoListContainer;
