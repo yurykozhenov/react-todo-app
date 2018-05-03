@@ -2,16 +2,9 @@ import React from 'react';
 import { ListItem, ListItemText } from 'material-ui/List';
 import Checkbox from 'material-ui/Checkbox';
 
-const Todo = ({ todo, onClick }) => (
-  <ListItem
-    dense
-    button
-    onClick={() => onClick(todo)}>
-    <Checkbox
-      checked={todo.completed}
-      tabIndex={-1}
-      disableRipple
-    />
+const Todo = ({ todo, handleToggle }) => (
+  <ListItem dense button onClick={handleToggle}>
+    <Checkbox checked={todo.completed} tabIndex={-1} disableRipple />
     <ListItemText primary={todo.title} />
   </ListItem>
 );

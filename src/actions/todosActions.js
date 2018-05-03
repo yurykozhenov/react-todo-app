@@ -3,7 +3,7 @@ export const TOGGLE_TODO = 'TOGGLE_TODO';
 export const toggleTodo = id => {
   return {
     type: TOGGLE_TODO,
-    id
+    id,
   };
 };
 
@@ -11,7 +11,7 @@ export const REQUEST_TODOS = 'REQUEST_TODOS';
 
 const requestTodos = () => {
   return {
-    type: REQUEST_TODOS
+    type: REQUEST_TODOS,
   };
 };
 
@@ -31,10 +31,8 @@ export const fetchTodos = () => {
     return fetch('https://jsonplaceholder.typicode.com/todos')
       .then(
         response => response.json(),
-        error => console.log('An error occurred.', error)
+        error => console.log('An error occurred.', error),
       )
-      .then(json =>
-        dispatch(receiveTodos(json))
-      );
+      .then(json => dispatch(receiveTodos(json.slice(0, 20))));
   };
 };
