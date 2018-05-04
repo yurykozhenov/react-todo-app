@@ -9,20 +9,16 @@ export const toggleTodo = id => {
 
 export const REQUEST_TODOS = 'REQUEST_TODOS';
 
-const requestTodos = () => {
-  return {
-    type: REQUEST_TODOS,
-  };
-};
+const requestTodos = () => ({
+  type: REQUEST_TODOS,
+});
 
 export const RECEIVE_TODOS = 'RECEIVE_TODOS';
 
-function receiveTodos(json) {
-  return {
-    type: RECEIVE_TODOS,
-    todos: json,
-  };
-}
+const receiveTodos = json => ({
+  type: RECEIVE_TODOS,
+  todos: json,
+});
 
 export const fetchTodos = () => {
   return dispatch => {

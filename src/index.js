@@ -10,7 +10,6 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
 import rootReducer from './reducers/rootReducer';
-import { fetchTodos } from './actions/todosActions';
 
 const loggerMiddleware = createLogger();
 
@@ -18,8 +17,6 @@ const store = createStore(
   rootReducer,
   applyMiddleware(thunkMiddleware, loggerMiddleware),
 );
-
-store.dispatch(fetchTodos()).then(() => console.log(store.getState()));
 
 render(
   <Provider store={store}>
