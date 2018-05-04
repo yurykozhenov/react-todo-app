@@ -23,7 +23,7 @@ const receiveTodos = json => ({
 export const fetchTodos = () => {
   return (dispatch, getState) => {
     if (getState().todos.isFetching) {
-      return;
+      return Promise.resolve();
     }
 
     dispatch(requestTodos());
