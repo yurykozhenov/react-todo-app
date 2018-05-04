@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { CircularProgress } from 'material-ui/Progress';
 
 import { toggleTodo, fetchTodos } from '../actions/todosActions';
 import TodoList from '../components/TodoList/TodoList';
@@ -12,14 +13,19 @@ class TodoListContainer extends Component {
   }
 
   render() {
-    const { toggleTodo, ...rest } = this.props;
+    const { toggleTodo, todos, isFetching } = this.props;
 
-    return <TodoList {...rest} onTodoClick={toggleTodo} />;
+    if (isFetching && todos.length === 0) {
+      return <CircularProgress />;
+    }
+
+    return <TodoList todos={todos} onTodoClick={toggleTodo} />;
   }
 }
 
 const mapStateToProps = state => ({
-  todos: state.todos,
+  todos: state.todos.todos,
+  isFetching: state.todos.isFetching,
 });
 
 const mapDispatchToProps = { toggleTodo, fetchTodos };

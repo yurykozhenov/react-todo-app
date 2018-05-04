@@ -21,7 +21,11 @@ const receiveTodos = json => ({
 });
 
 export const fetchTodos = () => {
-  return dispatch => {
+  return (dispatch, getState) => {
+    if (getState().todos.isFetching) {
+      return;
+    }
+
     dispatch(requestTodos());
 
     return fetch('https://jsonplaceholder.typicode.com/todos')
