@@ -1,6 +1,7 @@
 import React from 'react';
-import { ListItem, ListItemText } from 'material-ui/List';
-import Checkbox from 'material-ui/Checkbox';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Checkbox from '@material-ui/core/Checkbox';
 
 const Todo = ({ todo, onTodoClick }) => (
   <ListItem dense button onClick={onTodoClick}>
