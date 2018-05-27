@@ -3,14 +3,14 @@ import List from '@material-ui/core/List';
 
 import Todo from '../Todo/Todo';
 
-const TodoList = ({ todos, onTodoClick }) => (
+const TodoList = ({ todos, toggleTodo }) => (
   <div>
     <List>
       {todos.map(todo => (
         <Todo
           key={todo.id}
           todo={todo}
-          onTodoClick={() => onTodoClick(todo.id)}
+          onTodoClick={() => toggleTodo(todo.id)}
         />
       ))}
     </List>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Route, Link, Switch, withRouter } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -8,6 +9,9 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
+import { logout } from './auth/authActions';
+import PrivateRoute from './PrivateRoute';
+import LoginContainer from './auth/LoginContainer';
 import TodoListContainer from './todos/TodoListContainer';
 import Home from './Home';
 import NotFound from './NotFound';
@@ -25,7 +29,7 @@ const styles = {
   },
 };
 
-const App = ({ classes }) => (
+const App = ({ classes, isAuthenticated, logoutFromApp }) => (
   <div className={classes.root}>
     <AppBar position="static">
       <Toolbar>
@@ -42,18 +46,43 @@ const App = ({ classes }) => (
         <Button component={Link} color="inherit" to="/">
           Home
         </Button>
-        <Button component={Link} color="inherit" to="/todos">
-          Todos
-        </Button>
+        {isAuthenticated ? (
+          <React.Fragment>
+            <Button component={Link} color="inherit" to="/todos">
+              Todos
+            </Button>
+            <Button color="inherit" onClick={logoutFromApp}>
+              Logout
+            </Button>
+          </React.Fragment>
+        ) : (
+          <Button component={Link} color="inherit" to="/login">
+            Login
+          </Button>
+        )}
       </Toolbar>
     </AppBar>
 
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/todos" component={TodoListContainer} />
+      <Route path="/login" component={LoginContainer} />
+      <PrivateRoute path="/todos" component={TodoListContainer} />
       <Route component={NotFound} />
     </Switch>
   </div>
 );
 
-export default withStyles(styles)(App);
+const mapStateToProps = state => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
+
+const mapDispatchToProps = (dispatch, ownProps) => ({
+  logoutFromApp() {
+    dispatch(logout());
+    ownProps.history.push('/todos');
+  },
+});
+
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(App)),
+);
