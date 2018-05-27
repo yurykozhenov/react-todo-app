@@ -1,3 +1,24 @@
 {
-  "extends": "react-app"
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "linebreak-style": "off",
+    "no-confusing-arrow": "off",
+    "function-paren-newline": "off",
+    "arrow-parens": "off",
+    "no-console": "off",
+
+    "react/jsx-filename-extension": "off",
+    "react/prop-types": "off",
+
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always"
+      }
+    ]
+  }
 }

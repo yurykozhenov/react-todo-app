@@ -1,11 +1,9 @@
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 
-export const toggleTodo = id => {
-  return {
-    type: TOGGLE_TODO,
-    id,
-  };
-};
+export const toggleTodo = id => ({
+  type: TOGGLE_TODO,
+  id,
+});
 
 export const REQUEST_TODOS = 'REQUEST_TODOS';
 
@@ -20,19 +18,17 @@ const receiveTodos = json => ({
   todos: json,
 });
 
-export const fetchTodos = () => {
-  return (dispatch, getState) => {
-    if (getState().todos.isFetching) {
-      return Promise.resolve();
-    }
+export const fetchTodos = () => (dispatch, getState) => {
+  if (getState().todos.isFetching) {
+    return Promise.resolve();
+  }
 
-    dispatch(requestTodos());
+  dispatch(requestTodos());
 
-    return fetch('https://jsonplaceholder.typicode.com/todos')
-      .then(
-        response => response.json(),
-        error => console.log('An error occurred.', error),
-      )
-      .then(json => dispatch(receiveTodos(json.slice(0, 20))));
-  };
+  return fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(
+      response => response.json(),
+      error => console.log('An error occurred.', error),
+    )
+    .then(json => dispatch(receiveTodos(json.slice(0, 20))));
 };

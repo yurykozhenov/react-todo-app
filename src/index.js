@@ -9,7 +9,6 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
-
 import rootReducer from './reducers/rootReducer';
 
 const loggerMiddleware = createLogger();

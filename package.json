@@ -15,6 +15,11 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
     "husky": "^0.14.3",
     "lint-staged": "^7.1.2",
     "prettier": "1.12.1"
@@ -22,6 +27,11 @@
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
       "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.{js,jsx}": [
+      "eslint --ext .jsx,.js --fix",
       "git add"
     ]
   },
@@ -30,7 +40,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "lint": "eslint .",
+    "lint": "eslint --ext .jsx,.js src/",
     "eject": "react-scripts eject"
   }
 }
