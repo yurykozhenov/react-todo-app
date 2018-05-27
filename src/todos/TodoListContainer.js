@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-import { toggleTodo, fetchTodos } from '../actions/todosActions';
-import TodoList from '../components/TodoList/TodoList';
+import { toggleTodo, fetchTodos } from './todosActions';
+import TodoList from './TodoList/TodoList';
 
 class TodoListContainer extends Component {
   componentDidMount() {

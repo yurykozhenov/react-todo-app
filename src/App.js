@@ -8,9 +8,8 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import TodoListContainer from '../../containers/TodoListContainer';
-import Home from '../Home/Home';
-
+import TodoListContainer from './todos/TodoListContainer';
+import Home from './Home';
 import NotFound from './NotFound';
 
 const styles = {

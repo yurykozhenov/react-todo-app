@@ -7,9 +7,9 @@ import { createLogger } from 'redux-logger';
 import { BrowserRouter } from 'react-router-dom';
 
 import './index.css';
-import App from './components/App/App';
+import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import rootReducer from './reducers/rootReducer';
+import rootReducer from './rootReducer';
 
 const loggerMiddleware = createLogger();
 
