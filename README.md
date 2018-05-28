@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/yurykozhenov/react-todo-app.svg?branch=master)](https://travis-ci.com/yurykozhenov/react-todo-app)
+[![Build Status](https://travis-ci.org/yurykozhenov/react-todo-app.svg?branch=master)](https://travis-ci.org/yurykozhenov/react-todo-app)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
