@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/yurykozhenov/react-todo-app.svg?branch=master)](https://travis-ci.org/yurykozhenov/react-todo-app)
+[![Coverage Status](https://coveralls.io/repos/github/yurykozhenov/react-todo-app/badge.svg)](https://coveralls.io/github/yurykozhenov/react-todo-app)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
