@@ -1,23 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { MemoryRouter } from 'react-router-dom';
-import { createStore } from 'redux';
+import thunkMiddleware from 'redux-thunk';
 
-import App from './App';
+import TodoListContainer from './TodoListContainer';
 
-describe('App', () => {
+// TODO: Mock http call
+describe('TodoListContainer', () => {
   const store = createStore(
-    (state = { auth: { isAuthenticated: false } }) => state,
+    (state = { todos: { todos: [] } }) => state,
+    applyMiddleware(thunkMiddleware),
   );
 
   it('should render without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <Provider store={store}>
-        <MemoryRouter>
-          <App />
-        </MemoryRouter>
+        <TodoListContainer />
       </Provider>,
       div,
     );

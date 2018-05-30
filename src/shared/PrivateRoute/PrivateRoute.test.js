@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
-import App from './App';
+import PrivateRoute from './PrivateRoute';
 
-describe('App', () => {
+describe('PrivateRoute', () => {
   const store = createStore(
     (state = { auth: { isAuthenticated: false } }) => state,
   );
@@ -16,7 +16,7 @@ describe('App', () => {
     ReactDOM.render(
       <Provider store={store}>
         <MemoryRouter>
-          <App />
+          <PrivateRoute component={<div />} />
         </MemoryRouter>
       </Provider>,
       div,

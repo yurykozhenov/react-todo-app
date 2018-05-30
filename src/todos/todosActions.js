@@ -30,5 +30,5 @@ export const fetchTodos = () => (dispatch, getState) => {
       response => response.json(),
       error => console.log('An error occurred.', error),
     )
-    .then(json => dispatch(receiveTodos(json.slice(0, 20))));
+    .then(json => dispatch(receiveTodos(json ? json.slice(0, 20) : json)));
 };

@@ -10,11 +10,11 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import { logout } from './auth/authActions';
-import PrivateRoute from './PrivateRoute';
+import PrivateRoute from './shared/PrivateRoute/PrivateRoute';
 import LoginContainer from './auth/LoginContainer';
-import TodoListContainer from './todos/TodoListContainer';
-import Home from './Home';
-import NotFound from './NotFound';
+import TodoListContainer from './todos/TodoListContainer/TodoListContainer';
+import Home from './home/Home/Home';
+import NotFound from './shared/NotFound/NotFound';
 
 const styles = {
   root: {
@@ -29,6 +29,7 @@ const styles = {
   },
 };
 
+/* eslint-disable-next-line react/prop-types */
 const App = ({ classes, isAuthenticated, logoutFromApp }) => (
   <div className={classes.root}>
     <AppBar position="static">

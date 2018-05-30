@@ -1,7 +1,7 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
-import logo from './logo.svg';
+import logo from '../../logo.svg';
 
 const styles = {
   app: {
@@ -33,6 +33,7 @@ const styles = {
   },
 };
 
+/* eslint-disable-next-line react/prop-types */
 const Home = ({ classes }) => (
   <div className={classes.app}>
     <header className={classes.appHeader}>

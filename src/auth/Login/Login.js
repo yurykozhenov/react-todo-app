@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
@@ -29,5 +30,10 @@ const Login = ({ classes, login }) => (
     </Card>
   </div>
 );
+
+Login.propTypes = {
+  classes: PropTypes.object /* eslint-disable-line */,
+  login: PropTypes.func.isRequired,
+};
 
 export default withStyles(styles)(Login);

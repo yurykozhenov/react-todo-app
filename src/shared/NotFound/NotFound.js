@@ -13,6 +13,7 @@ const styles = {
   },
 };
 
+/* eslint-disable-next-line react/prop-types */
 const NotFound = ({ classes }) => (
   <Card className={classes.card}>
     <CardContent className={classes.cardContent}>Page Not Found</CardContent>
