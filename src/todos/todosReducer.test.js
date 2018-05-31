@@ -13,6 +13,13 @@ describe('Todos reducer', () => {
         { type: TOGGLE_TODO, id: 1 },
       ),
     ).toEqual({ todos: [{ id: 1, completed: true }] });
+
+    expect(
+      todosReducer(
+        { todos: [{ id: 1, completed: true }] },
+        { type: TOGGLE_TODO, id: 1 },
+      ),
+    ).toEqual({ todos: [{ id: 1, completed: false }] });
   });
 
   it('should handle request todos', () => {

@@ -8,12 +8,12 @@ import TodoListContainer from './TodoListContainer';
 
 // TODO: Mock http call
 describe('TodoListContainer', () => {
-  const store = createStore(
-    (state = { todos: { todos: [] } }) => state,
-    applyMiddleware(thunkMiddleware),
-  );
-
   it('should render without crashing', () => {
+    const store = createStore(
+      (state = { todos: { todos: [] } }) => state,
+      applyMiddleware(thunkMiddleware),
+    );
+
     const div = document.createElement('div');
     ReactDOM.render(
       <Provider store={store}>

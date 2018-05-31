@@ -1,22 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import { createStore } from 'redux';
+import { Provider } from 'react-redux';
 
-import App from './App';
+import LoginContainer from './LoginContainer';
 
-describe('App', () => {
+describe('LoginContainer', () => {
   it('should render without crashing', () => {
-    const store = createStore(
-      (state = { auth: { isAuthenticated: false } }) => state,
-    );
+    const store = createStore(state => state);
 
     const div = document.createElement('div');
     ReactDOM.render(
       <Provider store={store}>
         <MemoryRouter>
-          <App />
+          <LoginContainer />
         </MemoryRouter>
       </Provider>,
       div,

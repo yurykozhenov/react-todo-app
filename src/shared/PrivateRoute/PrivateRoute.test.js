@@ -7,11 +7,11 @@ import { Provider } from 'react-redux';
 import PrivateRoute from './PrivateRoute';
 
 describe('PrivateRoute', () => {
-  const store = createStore(
-    (state = { auth: { isAuthenticated: false } }) => state,
-  );
-
   it('should render without crashing', () => {
+    const store = createStore(
+      (state = { auth: { isAuthenticated: false } }) => state,
+    );
+
     const div = document.createElement('div');
     ReactDOM.render(
       <Provider store={store}>

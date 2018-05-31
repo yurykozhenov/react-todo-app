@@ -37,6 +37,13 @@
       "git add"
     ]
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.(js|jsx)",
+      "!src/index.js",
+      "!src/registerServiceWorker.js"
+    ]
+  },
   "scripts": {
     "precommit": "lint-staged",
     "start": "react-scripts start",

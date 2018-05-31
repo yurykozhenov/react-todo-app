@@ -11,7 +11,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 import { logout } from './auth/authActions';
 import PrivateRoute from './shared/PrivateRoute/PrivateRoute';
-import LoginContainer from './auth/LoginContainer';
+import LoginContainer from './auth/LoginContainer/LoginContainer';
 import TodoListContainer from './todos/TodoListContainer/TodoListContainer';
 import Home from './home/Home/Home';
 import NotFound from './shared/NotFound/NotFound';
