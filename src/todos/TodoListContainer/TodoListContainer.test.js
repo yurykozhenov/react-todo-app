@@ -21,7 +21,7 @@ describe('TodoListContainer', () => {
       applyMiddleware(thunkMiddleware),
     );
 
-    fetchMock.getOnce('https://jsonplaceholder.typicode.com/todos', {
+    fetchMock.getOnce(`${String(process.env.REACT_APP_API_URL)}/todos`, {
       body: [],
       headers: { 'content-type': 'application/json' },
     });

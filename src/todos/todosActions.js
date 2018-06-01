@@ -50,7 +50,7 @@ export const fetchTodos = (): ThunkAction => (dispatch, getState) => {
 
   dispatch(requestTodos());
 
-  return fetch('https://jsonplaceholder.typicode.com/todos')
+  return fetch(`${String(process.env.REACT_APP_API_URL)}/todos`)
     .then(response => response.json())
     .then((todos: Todo[]) => dispatch(receiveTodos(todos.slice(0, 20))));
 };
