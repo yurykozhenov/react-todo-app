@@ -10,34 +10,36 @@
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.4",
+    "react-scripts-ts": "2.16.0",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
+    "@types/fetch-mock": "^6.0.3",
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.3.0",
+    "@types/prop-types": "^15.5.3",
+    "@types/react": "^16.3.16",
+    "@types/react-dom": "^16.0.5",
+    "@types/react-redux": "^6.0.0",
+    "@types/react-router-dom": "^4.2.7",
+    "@types/redux-logger": "^3.0.6",
     "coveralls": "^3.0.1",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-flowtype": "^2.47.1",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.8.2",
     "fetch-mock": "^6.4.3",
-    "flow-bin": "^0.73.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.1.2",
     "prettier": "1.12.1",
-    "redux-mock-store": "^1.5.1"
+    "redux-mock-store": "^1.5.1",
+    "typescript": "2.9.1"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
+    "src/**/*.{ts,tsx,json,css}": [
       "prettier --write",
       "git add"
     ],
-    "src/**/*.{js,jsx}": [
-      "eslint --ext .jsx,.js --fix",
+    "src/**/*.{ts,tsx}": [
+      "tslint --fix",
       "git add"
     ]
   },
@@ -50,12 +52,11 @@
   },
   "scripts": {
     "precommit": "lint-staged",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "test:ci": "react-scripts test --env=jsdom --coverage --coverageReporters=text-lcov | coveralls",
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "test:ci": "react-scripts-ts test --env=jsdom --coverage --coverageReporters=text-lcov | coveralls",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext .jsx,.js src/",
-    "flow": "flow"
+    "lint": "tslint --project tsconfig.json"
   }
 }

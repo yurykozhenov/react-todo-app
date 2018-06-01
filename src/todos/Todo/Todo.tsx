@@ -1,0 +1,26 @@
+import * as React from 'react';
+import * as PropTypes from 'prop-types';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import Checkbox from '@material-ui/core/Checkbox';
+import { Todo as TodoType } from '../Todo';
+
+interface Props {
+  todo: TodoType;
+  onTodoClick: () => void;
+}
+
+const Todo = ({ todo, onTodoClick }: Props) => (
+  <ListItem dense button onClick={onTodoClick}>
+    <Checkbox checked={todo.completed} tabIndex={-1} disableRipple />
+    <ListItemText primary={todo.title} />
+  </ListItem>
+);
+
+Todo['propTypes'] = {
+  todo: PropTypes.shape({ completed: PropTypes.bool, title: PropTypes.string })
+    .isRequired,
+  onTodoClick: PropTypes.func.isRequired,
+};
+
+export default Todo;
