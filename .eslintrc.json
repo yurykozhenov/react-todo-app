@@ -12,7 +12,6 @@
     "function-paren-newline": "off",
     "arrow-parens": "off",
     "no-console": "off",
-    "no-use-before-define": "off",
 
     "react/jsx-filename-extension": "off",
 

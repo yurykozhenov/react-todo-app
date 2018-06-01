@@ -4,6 +4,8 @@ import type { State } from '../State';
 
 import type { Todo } from './Todo';
 
+/* eslint-disable no-use-before-define */
+
 type GetState = () => State;
 type Dispatch = (action: TodosAction | ThunkAction | PromiseAction) => any;
 type ThunkAction = (dispatch: Dispatch, getState: GetState) => any;
@@ -13,6 +15,8 @@ export type TodosAction =
   | ToggleTodoAction
   | ReceiveTodosAction
   | RequestTodosAction;
+
+/* eslint-enable no-use-before-define */
 
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 export type ToggleTodoAction = { type: typeof TOGGLE_TODO, id: number };
