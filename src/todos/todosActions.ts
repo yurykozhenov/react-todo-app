@@ -1,6 +1,8 @@
-import { Todo } from './Todo';
 import { Dispatch } from 'redux';
+
 import { State } from '../State';
+
+import { Todo } from './Todo';
 
 export type TodosAction =
   | ToggleTodoAction

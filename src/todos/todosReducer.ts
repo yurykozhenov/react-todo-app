@@ -1,10 +1,10 @@
+import { Todo } from './Todo';
 import {
   RECEIVE_TODOS,
   REQUEST_TODOS,
   TodosAction,
   TOGGLE_TODO,
 } from './todosActions';
-import { Todo } from './Todo';
 
 export interface TodosState {
   isFetching?: boolean;

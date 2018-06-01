@@ -1,8 +1,8 @@
+import * as fetchMock from 'fetch-mock';
 import * as configureMockStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 
 import { fetchTodos, RECEIVE_TODOS, REQUEST_TODOS } from './todosActions';
-import * as fetchMock from 'fetch-mock';
 
 const mockStore = configureMockStore([thunkMiddleware]);
 

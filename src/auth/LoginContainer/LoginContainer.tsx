@@ -1,10 +1,10 @@
+import { History } from 'history';
 import { connect, Dispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import { login } from '../authActions';
-import Login from '../Login/Login';
 import { AuthAction } from '../authReducer';
-import { History } from 'history';
+import Login from '../Login/Login';
 
 const mapDispatchToProps = (
   dispatch: Dispatch<AuthAction>,

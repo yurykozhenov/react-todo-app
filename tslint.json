@@ -9,7 +9,7 @@
   "rules": {
     "member-access": [true, "no-public"],
     "ordered-imports": {
-      "severity": "off",
+      "severity": "warn",
       "options": [
         { "grouped-imports": true }
       ]

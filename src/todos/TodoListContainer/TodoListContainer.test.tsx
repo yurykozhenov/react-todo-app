@@ -1,8 +1,8 @@
 import * as fetchMock from 'fetch-mock';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { applyMiddleware, createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { applyMiddleware, createStore } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
 import TodoListContainer from './TodoListContainer';

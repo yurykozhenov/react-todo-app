@@ -1,8 +1,8 @@
 import { createStore } from 'redux';
 
 import authReducer from './auth/authReducer';
-import todosReducer from './todos/todosReducer';
 import rootReducer from './rootReducer';
+import todosReducer from './todos/todosReducer';
 
 describe('Root reducer', () => {
   it('should return the initial state', () => {

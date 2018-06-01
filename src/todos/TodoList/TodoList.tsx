@@ -1,9 +1,9 @@
-import * as React from 'react';
-import * as PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
+import * as PropTypes from 'prop-types';
+import * as React from 'react';
 
-import Todo from '../Todo/Todo';
 import { Todo as TodoType } from '../Todo';
+import Todo from '../Todo/Todo';
 
 interface Props {
   todos: TodoType[];

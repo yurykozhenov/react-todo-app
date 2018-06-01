@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import thunkMiddleware from 'redux-thunk';
-import { createLogger } from 'redux-logger';
 import { BrowserRouter } from 'react-router-dom';
+import { applyMiddleware, createStore } from 'redux';
+import { createLogger } from 'redux-logger';
+import thunkMiddleware from 'redux-thunk';
 
-import './index.css';
 import App from './App';
+import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import rootReducer from './rootReducer';
 

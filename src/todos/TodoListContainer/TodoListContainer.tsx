@@ -1,11 +1,11 @@
+import CircularProgress from '@material-ui/core/CircularProgress';
 import * as React from 'react';
 import { connect } from 'react-redux';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
-import { toggleTodo, fetchTodos } from '../todosActions';
-import TodoList from '../TodoList/TodoList';
-import { Todo } from '../Todo';
 import { State } from '../../State';
+import { Todo } from '../Todo';
+import TodoList from '../TodoList/TodoList';
+import { fetchTodos, toggleTodo } from '../todosActions';
 
 interface Props {
   todos: Todo[];

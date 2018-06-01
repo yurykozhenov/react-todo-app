@@ -1,22 +1,22 @@
-import * as React from 'react';
-import { connect, Dispatch } from 'react-redux';
-import { Route, Link, Switch, withRouter } from 'react-router-dom';
-import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
+import { withStyles } from '@material-ui/core/styles';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
+import { History } from 'history';
+import * as React from 'react';
+import { connect, Dispatch } from 'react-redux';
+import { Link, Route, Switch, withRouter } from 'react-router-dom';
 
 import { logout } from './auth/authActions';
-import PrivateRoute from './shared/PrivateRoute/PrivateRoute';
 import LoginContainer from './auth/LoginContainer/LoginContainer';
-import TodoListContainer from './todos/TodoListContainer/TodoListContainer';
 import Home from './home/Home/Home';
 import NotFound from './shared/NotFound/NotFound';
+import PrivateRoute from './shared/PrivateRoute/PrivateRoute';
 import { State } from './State';
-import { History } from 'history';
+import TodoListContainer from './todos/TodoListContainer/TodoListContainer';
 
 const decorate = withStyles({
   root: {

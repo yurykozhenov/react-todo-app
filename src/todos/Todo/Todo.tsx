@@ -1,8 +1,9 @@
-import * as React from 'react';
-import * as PropTypes from 'prop-types';
+import Checkbox from '@material-ui/core/Checkbox';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import Checkbox from '@material-ui/core/Checkbox';
+import * as PropTypes from 'prop-types';
+import * as React from 'react';
+
 import { Todo as TodoType } from '../Todo';
 
 interface Props {

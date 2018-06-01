@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import { createStore } from 'redux';
-import { Provider } from 'react-redux';
 
 import LoginContainer from './LoginContainer';
 

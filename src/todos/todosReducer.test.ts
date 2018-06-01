@@ -1,6 +1,6 @@
+import { Todo } from './Todo';
 import { RECEIVE_TODOS, REQUEST_TODOS, TOGGLE_TODO } from './todosActions';
 import todosReducer from './todosReducer';
-import { Todo } from './Todo';
 
 describe('Todos reducer', () => {
   it('should return the initial state', () => {
