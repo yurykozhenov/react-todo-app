@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Link, Switch, withRouter } from 'react-router-dom';
@@ -15,6 +17,7 @@ import LoginContainer from './auth/LoginContainer/LoginContainer';
 import TodoListContainer from './todos/TodoListContainer/TodoListContainer';
 import Home from './home/Home/Home';
 import NotFound from './shared/NotFound/NotFound';
+import type { State } from './State';
 
 const styles = {
   root: {
@@ -77,7 +80,7 @@ const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated,
 });
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = (dispatch: (action: any) => State, ownProps) => ({
   logoutFromApp() {
     dispatch(logout());
     ownProps.history.push('/todos');

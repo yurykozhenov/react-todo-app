@@ -1,3 +1,5 @@
+// @flow
+
 import fetchMock from 'fetch-mock';
 import React from 'react';
 import ReactDOM from 'react-dom';

@@ -1,9 +1,13 @@
+// @flow
+
 import { LOGIN, LOGOUT } from './authActions';
 import authReducer from './authReducer';
 
 describe('Auth reducer', () => {
   it('should return the initial state', () => {
-    expect(authReducer(undefined, {})).toEqual({ isAuthenticated: false });
+    expect(authReducer(undefined, ({}: any))).toEqual({
+      isAuthenticated: false,
+    });
   });
 
   it('should handle login', () => {

@@ -1,3 +1,4 @@
+// @flow
 import configureMockStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 import fetchMock from 'fetch-mock';

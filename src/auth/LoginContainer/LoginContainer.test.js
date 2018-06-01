@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { MemoryRouter } from 'react-router-dom';
@@ -8,7 +10,7 @@ import LoginContainer from './LoginContainer';
 
 describe('LoginContainer', () => {
   it('should render without crashing', () => {
-    const store = createStore(state => state);
+    const store = createStore((state = {}) => state);
 
     const div = document.createElement('div');
     ReactDOM.render(

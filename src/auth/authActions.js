@@ -1,3 +1,5 @@
+// @flow
+
 export const LOGIN = 'LOGIN';
 
 export const login = () => ({

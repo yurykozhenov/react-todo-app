@@ -1,3 +1,5 @@
+// @flow
+
 import { login, LOGIN, logout, LOGOUT } from './authActions';
 
 describe('Auth actions', () => {

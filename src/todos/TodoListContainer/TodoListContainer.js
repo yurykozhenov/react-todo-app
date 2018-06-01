@@ -1,12 +1,22 @@
+// @flow
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import { toggleTodo, fetchTodos } from '../todosActions';
 import TodoList from '../TodoList/TodoList';
+import type { Todo } from '../Todo';
+
+type Props = {
+  todos: Todo[],
+  isFetching: boolean,
+  toggleTodo: () => any,
+  fetchTodos: () => any,
+};
 
 /* eslint-disable react/prop-types */
-class TodoListContainer extends Component {
+class TodoListContainer extends Component<Props> {
   componentDidMount() {
     this.props.fetchTodos();
   }

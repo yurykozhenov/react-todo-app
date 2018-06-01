@@ -1,10 +1,18 @@
+// @flow
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import List from '@material-ui/core/List';
 
 import Todo from '../Todo/Todo';
+import type { Todo as TodoType } from '../Todo';
 
-const TodoList = ({ todos, toggleTodo }) => (
+type Props = {
+  todos: TodoType[],
+  toggleTodo: (id: number) => void,
+};
+
+const TodoList = ({ todos, toggleTodo }: Props) => (
   <div>
     <List>
       {todos.map(todo => (
