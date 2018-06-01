@@ -34,7 +34,6 @@
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
       "prettier --write",
-      "eslint --fix",
       "git add"
     ],
     "src/**/*.{js,jsx}": [
