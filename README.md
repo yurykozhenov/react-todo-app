@@ -1,9 +1,22 @@
 [![Build Status](https://travis-ci.org/yurykozhenov/react-todo-app.svg?branch=master)](https://travis-ci.org/yurykozhenov/react-todo-app)
 [![codecov](https://codecov.io/gh/yurykozhenov/react-todo-app/branch/master/graph/badge.svg)](https://codecov.io/gh/yurykozhenov/react-todo-app)
 [![Coverage Status](https://coveralls.io/repos/github/yurykozhenov/react-todo-app/badge.svg)](https://coveralls.io/github/yurykozhenov/react-todo-app)
-[![Greenkeeper badge](https://badges.greenkeeper.io/yurykozhenov/react-todo-app.svg)](https://greenkeeper.io/)
 [![Maintainability](https://api.codeclimate.com/v1/badges/69e60aedcb6c4fcea67c/maintainability)](https://codeclimate.com/github/yurykozhenov/react-todo-app/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/69e60aedcb6c4fcea67c/test_coverage)](https://codeclimate.com/github/yurykozhenov/react-todo-app/test_coverage)
+[![Greenkeeper badge](https://badges.greenkeeper.io/yurykozhenov/react-todo-app.svg)](https://greenkeeper.io/)
+
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=bugs)](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=bugs)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=code_smells)](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=code_smells)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=coverage)](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=coverage)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=duplicated_lines_density)](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=duplicated_lines_density)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=ncloc)](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=ncloc)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=sqale_rating)](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=sqale_rating)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=sqale_rating)](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=sqale_rating)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=alert_status)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=reliability_rating)](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=reliability_rating)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=security_rating)](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=security_rating)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=sqale_index)](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=sqale_index)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=vulnerabilities)](https://sonarcloud.io/api/project_badges/measure?project=react-todo-app&metric=vulnerabilities)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
