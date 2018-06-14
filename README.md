@@ -2,6 +2,8 @@
 [![codecov](https://codecov.io/gh/yurykozhenov/react-todo-app/branch/master/graph/badge.svg)](https://codecov.io/gh/yurykozhenov/react-todo-app)
 [![Coverage Status](https://coveralls.io/repos/github/yurykozhenov/react-todo-app/badge.svg)](https://coveralls.io/github/yurykozhenov/react-todo-app)
 [![Greenkeeper badge](https://badges.greenkeeper.io/yurykozhenov/react-todo-app.svg)](https://greenkeeper.io/)
+[![Maintainability](https://api.codeclimate.com/v1/badges/69e60aedcb6c4fcea67c/maintainability)](https://codeclimate.com/github/yurykozhenov/react-todo-app/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/69e60aedcb6c4fcea67c/test_coverage)](https://codeclimate.com/github/yurykozhenov/react-todo-app/test_coverage)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
