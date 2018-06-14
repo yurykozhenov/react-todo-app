@@ -8,4 +8,5 @@ cache:
     - node_modules
 script:
   - yarn run build
-  - yarn run test:ci && codecov
+  - yarn run test:ci && cat ./coverage/lcov.info | coveralls && codecov
+
