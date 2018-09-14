@@ -123,9 +123,9 @@
     "@types/react" "*"
     redux "^4.0.0"
 
-"@types/react-router-dom@^4.2.7":
-  version "4.2.7"
-  resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-4.2.7.tgz#9d36bfe175f916dd8d7b6b0237feed6cce376b4c"
+"@types/react-router-dom@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-4.3.1.tgz#71fe2918f8f60474a891520def40a63997dafe04"
   dependencies:
     "@types/history" "*"
     "@types/react" "*"
