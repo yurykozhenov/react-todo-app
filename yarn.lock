@@ -82,9 +82,9 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@types/fetch-mock@^6.0.3":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@types/fetch-mock/-/fetch-mock-6.0.3.tgz#54ba90776293e728089bf53ba53e3c69f1c80655"
+"@types/fetch-mock@^6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@types/fetch-mock/-/fetch-mock-6.0.4.tgz#fbe20ab0cc151fe67b2e1b71e7ef29a986a90f1f"
 
 "@types/history@*":
   version "4.6.2"
