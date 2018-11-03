@@ -2890,13 +2890,14 @@ fbjs@^0.8.1, fbjs@^0.8.16:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
 
-fetch-mock@^6.4.3:
-  version "6.4.3"
-  resolved "https://registry.yarnpkg.com/fetch-mock/-/fetch-mock-6.4.3.tgz#52f8e3fa12f7e2922a7851b8ee5d2bdaaebf4db3"
+fetch-mock@^7.2.4:
+  version "7.2.4"
+  resolved "https://registry.yarnpkg.com/fetch-mock/-/fetch-mock-7.2.4.tgz#a8c351532a195e3f9103a89df7aeb9a33ecc3e3c"
   dependencies:
     babel-polyfill "^6.26.0"
     glob-to-regexp "^0.4.0"
     path-to-regexp "^2.2.1"
+    whatwg-url "^6.5.0"
 
 figures@^1.7.0:
   version "1.7.0"
@@ -6099,9 +6100,9 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@1.13.4:
-  version "1.13.4"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.4.tgz#31bbae6990f13b1093187c731766a14036fa72e6"
+prettier@1.13.5:
+  version "1.13.5"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.5.tgz#7ae2076998c8edce79d63834e9b7b09fead6bfd0"
 
 pretty-bytes@^4.0.2:
   version "4.0.2"
@@ -8241,6 +8242,14 @@ whatwg-mimetype@^2.0.0, whatwg-mimetype@^2.1.0:
 whatwg-url@^6.4.0:
   version "6.4.1"
   resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-6.4.1.tgz#fdb94b440fd4ad836202c16e9737d511f012fd67"
+  dependencies:
+    lodash.sortby "^4.7.0"
+    tr46 "^1.0.1"
+    webidl-conversions "^4.0.2"
+
+whatwg-url@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-6.5.0.tgz#f2df02bff176fd65070df74ad5ccbb5a199965a8"
   dependencies:
     lodash.sortby "^4.7.0"
     tr46 "^1.0.1"
