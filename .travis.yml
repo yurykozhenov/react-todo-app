@@ -1,10 +1,9 @@
 language: node_js
 node_js:
   - 10
-install:
-  - npm install -g codecov
 cache: npm
 script:
+  - npm install -g codecov
   - npm run build
   - npm run test:ci && cat ./coverage/lcov.info | coveralls && codecov
 
