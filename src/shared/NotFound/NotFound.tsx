@@ -3,7 +3,7 @@ import CardContent from '@material-ui/core/CardContent';
 import { createStyles, WithStyles, withStyles } from '@material-ui/core/styles';
 import React from 'react';
 
-const styles = () => createStyles({
+const styles = createStyles({
   card: {
     maxWidth: 300,
     margin: '16px auto',

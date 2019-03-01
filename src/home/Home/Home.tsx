@@ -3,7 +3,7 @@ import React from 'react';
 
 import logo from '../../logo.svg';
 
-const styles = () => createStyles({
+const styles = createStyles({
   app: {
     textAlign: 'center',
   },

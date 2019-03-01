@@ -20,7 +20,7 @@ import PrivateRoute from './shared/PrivateRoute/PrivateRoute';
 import { State } from './State';
 import TodoListContainer from './todos/TodoListContainer/TodoListContainer';
 
-const styles = () => createStyles({
+const styles = createStyles({
   root: {
     flexGrow: 1,
   },

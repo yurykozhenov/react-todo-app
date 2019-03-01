@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { RouteComponentProps } from 'react-router';
 
-const styles = () => createStyles({
+const styles = createStyles({
   cardContainer: {
     padding: 16,
   },
