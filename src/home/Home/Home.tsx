@@ -1,9 +1,9 @@
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, createStyles, WithStyles } from '@material-ui/core/styles';
 import * as React from 'react';
 
 import logo from '../../logo.svg';
 
-const decorate = withStyles({
+const styles = () => createStyles({
   app: {
     textAlign: 'center',
   },
@@ -33,7 +33,7 @@ const decorate = withStyles({
   },
 });
 
-const Home = decorate(({ classes }) => (
+const Home = withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
   <div className={classes.app}>
     <header className={classes.appHeader}>
       <img src={logo} className={classes.appLogo} alt="logo" />

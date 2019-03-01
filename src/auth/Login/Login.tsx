@@ -2,12 +2,12 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, WithStyles, createStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
 
-const decorate = withStyles({
+const styles = () => createStyles({
   cardContainer: {
     padding: 16,
   },
@@ -16,11 +16,11 @@ const decorate = withStyles({
   },
 });
 
-interface Props {
+interface Props extends WithStyles<typeof styles> {
   login: () => void;
 }
 
-const Login = decorate<Props>(({ classes, login }) => (
+const Login = withStyles(styles)(({ classes, login }: Props) => (
   <div className={classes.cardContainer}>
     <Card>
       <CardHeader title="Login" />
@@ -35,7 +35,7 @@ const Login = decorate<Props>(({ classes, login }) => (
   </div>
 ));
 
-Login['propTypes'] = {
+Login.propTypes = {
   classes: PropTypes.object,
   login: PropTypes.func.isRequired,
 };

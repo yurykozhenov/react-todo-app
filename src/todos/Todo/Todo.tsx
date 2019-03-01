@@ -18,7 +18,7 @@ const Todo = ({ todo, onTodoClick }: Props) => (
   </ListItem>
 );
 
-Todo['propTypes'] = {
+Todo.propTypes = {
   todo: PropTypes.shape({ completed: PropTypes.bool, title: PropTypes.string })
     .isRequired,
   onTodoClick: PropTypes.func.isRequired,

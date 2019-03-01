@@ -7,8 +7,9 @@ import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import { History } from 'history';
 import * as React from 'react';
-import { connect, Dispatch } from 'react-redux';
+import { connect } from 'react-redux';
 import { Link, Route, Switch, withRouter } from 'react-router-dom';
+import { Dispatch } from 'redux';
 
 import { logout } from './auth/authActions';
 import LoginContainer from './auth/LoginContainer/LoginContainer';
@@ -36,7 +37,7 @@ interface Props {
   logoutFromApp: () => void;
 }
 
-const App = decorate<Props>(({ classes, isAuthenticated, logoutFromApp }) => (
+const App = decorate(({ classes, isAuthenticated, logoutFromApp }: Props & { classes: any }) => (
   <div className={classes.root}>
     <AppBar position="static">
       <Toolbar>

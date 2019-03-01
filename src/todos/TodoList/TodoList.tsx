@@ -24,7 +24,7 @@ const TodoList = ({ todos, toggleTodo }: Props) => (
   </div>
 );
 
-TodoList['propTypes'] = {
+TodoList.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,

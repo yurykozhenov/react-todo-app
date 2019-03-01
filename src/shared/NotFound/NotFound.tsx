@@ -1,9 +1,9 @@
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import { withStyles } from '@material-ui/core/styles';
+import { createStyles, WithStyles, withStyles } from '@material-ui/core/styles';
 import * as React from 'react';
 
-const decorate = withStyles({
+const styles = () => createStyles({
   card: {
     maxWidth: 300,
     margin: '16px auto',
@@ -13,7 +13,7 @@ const decorate = withStyles({
   },
 });
 
-const NotFound = decorate(({ classes }) => (
+const NotFound = withStyles(styles)(({ classes }: WithStyles<typeof styles>) => (
   <Card className={classes.card}>
     <CardContent className={classes.cardContent}>Page Not Found</CardContent>
   </Card>

@@ -41,7 +41,7 @@ const receiveTodos = (todos: Todo[]): ReceiveTodosAction => ({
 });
 
 export const fetchTodos = () => (
-  dispatch: Dispatch<TodosAction, State>,
+  dispatch: Dispatch<TodosAction>,
   getState: () => State,
 ) => {
   const state = getState();

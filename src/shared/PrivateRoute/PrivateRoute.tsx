@@ -32,7 +32,7 @@ const PrivateRoute = ({
   />
 );
 
-PrivateRoute['propTypes'] = {
+PrivateRoute.propTypes = {
   component: PropTypes.any.isRequired,
 };
 
