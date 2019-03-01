@@ -1,5 +1,5 @@
 import CircularProgress from '@material-ui/core/CircularProgress';
-import * as React from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import { State } from '../../State';
@@ -9,8 +9,8 @@ import { fetchTodos, toggleTodo } from '../todosActions';
 
 interface Props {
   todos: Todo[];
-  isFetching: boolean;
-  toggleTodo: () => any;
+  isFetching?: boolean;
+  toggleTodo: (id: number) => any;
   fetchTodos: () => any;
 }
 

@@ -1,14 +1,15 @@
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, createStyles, WithStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import { History } from 'history';
-import * as React from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { Link, Route, Switch, withRouter } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router';
 import { Dispatch } from 'redux';
 
 import { logout } from './auth/authActions';
@@ -19,7 +20,7 @@ import PrivateRoute from './shared/PrivateRoute/PrivateRoute';
 import { State } from './State';
 import TodoListContainer from './todos/TodoListContainer/TodoListContainer';
 
-const decorate = withStyles({
+const styles = () => createStyles({
   root: {
     flexGrow: 1,
   },
@@ -32,12 +33,12 @@ const decorate = withStyles({
   },
 });
 
-interface Props {
+interface Props extends WithStyles<typeof styles>, RouteComponentProps {
   isAuthenticated: boolean;
-  logoutFromApp: () => void;
+  logoutFromApp: () => any;
 }
 
-const App = decorate(({ classes, isAuthenticated, logoutFromApp }: Props & { classes: any }) => (
+const App = withStyles(styles)(({ classes, isAuthenticated, logoutFromApp }: Props) => (
   <div className={classes.root}>
     <AppBar position="static">
       <Toolbar>
@@ -89,7 +90,7 @@ const mapStateToProps = (state: State) => ({
 });
 
 const mapDispatchToProps = (
-  dispatch: Dispatch<any>,
+  dispatch: Dispatch,
   ownProps: { history: History },
 ) => ({
   logoutFromApp() {
@@ -100,4 +101,4 @@ const mapDispatchToProps = (
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(
   App,
-) as React.ComponentType<any>);
+));

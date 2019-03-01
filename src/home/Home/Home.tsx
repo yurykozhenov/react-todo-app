@@ -1,5 +1,5 @@
 import { withStyles, createStyles, WithStyles } from '@material-ui/core/styles';
-import * as React from 'react';
+import React from 'react';
 
 import logo from '../../logo.svg';
 

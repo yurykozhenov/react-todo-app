@@ -1,5 +1,5 @@
-import * as fetchMock from 'fetch-mock';
-import * as configureMockStore from 'redux-mock-store';
+import fetchMock from 'fetch-mock';
+import configureMockStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 
 import { fetchTodos, RECEIVE_TODOS, REQUEST_TODOS } from './todosActions';

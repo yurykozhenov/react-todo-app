@@ -4,8 +4,9 @@ import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import { withStyles, WithStyles, createStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
-import * as PropTypes from 'prop-types';
-import * as React from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { RouteComponentProps } from 'react-router';
 
 const styles = () => createStyles({
   cardContainer: {
@@ -16,7 +17,7 @@ const styles = () => createStyles({
   },
 });
 
-interface Props extends WithStyles<typeof styles> {
+interface Props extends WithStyles<typeof styles>, RouteComponentProps {
   login: () => void;
 }
 
